@@ -2,7 +2,7 @@ use serde::{Deserialize, Serialize};
 use worker::*;
 use reqwest;
 
-const API_URL: &str = "https://soukesmar.com/wp-json";
+const API_URL: &str = "https://domain.com/rest-api";
 
 #[derive(Debug, Deserialize, Serialize)]
 struct GenericResponse {
