@@ -1,0 +1,17 @@
+#name = "cache-rs"
+#main = "build/worker/shim.mjs"
+#compatibility_date = "2023-03-22"
+#
+#[build]
+#command = "cargo install --path ../../worker-build && worker-build --release"
+
+
+name = "worker-rust"
+main = "build/worker/shim.mjs"
+compatibility_date = "2023-12-01"
+
+[build]
+command = "cargo install -q worker-build && worker-build --release"
+
+[env.dev]
+build = { command = "cargo install -q worker-build && worker-build --dev" }
